@@ -1,0 +1,146 @@
+PS C:\CODING\personal\college\CS532\Assignment-1> python .\main.py -o "./results_tfidf/" -j 3 
+Train/test sizes: 8710 / 2178
+Using tfidf embeddings/vectors...
+
+================================================================================
+RUNNING MULTICLASS CLASSIFICATION (6 labels)
+================================================================================
+
+============================================================
+Running model (Multiclass): logreg
+[logreg] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.3999
+ > fold 2/5 val_f1=0.4041
+ > fold 3/5 val_f1=0.3958
+ > fold 4/5 val_f1=0.4107
+ > fold 5/5 val_f1=0.3941
+[logreg] Training final model on full TRAIN and evaluating on TEST...
+[logreg] Done. test f1_macro=0.3864 | acc=0.37373737373737376
+
+============================================================
+Running model (Multiclass): linear_svc
+[linear_svc] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.4068
+ > fold 2/5 val_f1=0.4029
+ > fold 3/5 val_f1=0.3911
+ > fold 4/5 val_f1=0.4114
+ > fold 5/5 val_f1=0.3942
+[linear_svc] Training final model on full TRAIN and evaluating on TEST...
+[linear_svc] Done. test f1_macro=0.3896 | acc=0.37373737373737376
+
+============================================================
+Running model (Multiclass): sgd_hinge
+[sgd_hinge] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.3755
+ > fold 2/5 val_f1=0.3715
+ > fold 3/5 val_f1=0.3834
+ > fold 4/5 val_f1=0.3937
+ > fold 5/5 val_f1=0.3745
+[sgd_hinge] Training final model on full TRAIN and evaluating on TEST...
+[sgd_hinge] Done. test f1_macro=0.3622 | acc=0.35537190082644626
+
+============================================================
+Running model (Multiclass): multinb
+[multinb] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.3540
+ > fold 2/5 val_f1=0.3389
+ > fold 3/5 val_f1=0.3660
+ > fold 4/5 val_f1=0.3386
+ > fold 5/5 val_f1=0.3452
+[multinb] Training final model on full TRAIN and evaluating on TEST...
+[multinb] Done. test f1_macro=0.3322 | acc=0.34710743801652894
+
+============================================================
+Running model (Multiclass): random_forest
+[random_forest] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.3899
+ > fold 2/5 val_f1=0.3965
+ > fold 3/5 val_f1=0.4129
+ > fold 4/5 val_f1=0.3988
+ > fold 5/5 val_f1=0.3812
+[random_forest] Training final model on full TRAIN and evaluating on TEST...
+[random_forest] Done. test f1_macro=0.4037 | acc=0.3957759412304867
+
+============================================================
+Running model (Multiclass): extra_trees
+[extra_trees] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.3956
+ > fold 2/5 val_f1=0.3991
+ > fold 3/5 val_f1=0.4042
+ > fold 4/5 val_f1=0.4029
+ > fold 5/5 val_f1=0.3891
+[extra_trees] Training final model on full TRAIN and evaluating on TEST...
+[extra_trees] Done. test f1_macro=0.3976 | acc=0.38980716253443526
+
+================================================================================
+RUNNING BINARY CLASSIFICATION (2 labels)
+================================================================================
+
+============================================================
+Running model (Binary): logreg
+[logreg] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.7230
+ > fold 2/5 val_f1=0.7277
+ > fold 3/5 val_f1=0.7144
+ > fold 4/5 val_f1=0.7397
+ > fold 5/5 val_f1=0.7352
+[logreg] Training final model on full TRAIN and evaluating on TEST...
+[logreg] Done. test f1_macro=0.7061 | acc=0.7098255280073462
+
+============================================================
+Running model (Binary): linear_svc
+[linear_svc] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.7174
+ > fold 2/5 val_f1=0.7052
+ > fold 3/5 val_f1=0.7099
+ > fold 4/5 val_f1=0.7352
+ > fold 5/5 val_f1=0.7151
+[linear_svc] Training final model on full TRAIN and evaluating on TEST...
+[linear_svc] Done. test f1_macro=0.6937 | acc=0.6960514233241506
+
+============================================================
+Running model (Binary): sgd_hinge
+[sgd_hinge] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.7185
+ > fold 2/5 val_f1=0.7183
+ > fold 3/5 val_f1=0.7114
+ > fold 4/5 val_f1=0.7427
+ > fold 5/5 val_f1=0.7286
+[sgd_hinge] Training final model on full TRAIN and evaluating on TEST...
+[sgd_hinge] Done. test f1_macro=0.6944 | acc=0.6983471074380165
+
+============================================================
+Running model (Binary): multinb
+[multinb] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.6957
+ > fold 2/5 val_f1=0.7004
+ > fold 3/5 val_f1=0.6912
+ > fold 4/5 val_f1=0.7095
+ > fold 5/5 val_f1=0.7108
+[multinb] Training final model on full TRAIN and evaluating on TEST...
+[multinb] Done. test f1_macro=0.6862 | acc=0.6942148760330579
+
+============================================================
+Running model (Binary): random_forest
+[random_forest] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.7238
+ > fold 2/5 val_f1=0.7169
+ > fold 3/5 val_f1=0.7071
+ > fold 4/5 val_f1=0.7208
+ > fold 5/5 val_f1=0.7259
+[random_forest] Training final model on full TRAIN and evaluating on TEST...
+[random_forest] Done. test f1_macro=0.6928 | acc=0.7061524334251607
+
+============================================================
+Running model (Binary): extra_trees
+[extra_trees] Running 5-fold CV (feature_type=tfidf)...
+ > fold 1/5 val_f1=0.7162
+ > fold 2/5 val_f1=0.7200
+ > fold 3/5 val_f1=0.7076
+ > fold 4/5 val_f1=0.7393
+ > fold 5/5 val_f1=0.7320
+[extra_trees] Training final model on full TRAIN and evaluating on TEST...
+[extra_trees] Done. test f1_macro=0.7039 | acc=0.716712580348944
+
+All models finished. Results saved to: ./results_tfidf/
+Elapsed time: 1333.2s

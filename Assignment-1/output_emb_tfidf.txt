@@ -1,0 +1,160 @@
+PS C:\CODING\personal\college\CS532\Assignment-1> python .\main.py -o "./results_emb_tfidf/" --feature_type "emb_tfidf"     
+Train/test sizes: 8710 / 2178
+Using emb_tfidf embeddings/vectors...
+Loading GloVe embeddings from: ./wiki_giga_2024_50_MFT20_vectors_seed_123_alpha_0.75_eta_0.075_combined.txt
+Loaded 1287614 embeddings, dim=50
+
+================================================================================
+RUNNING MULTICLASS CLASSIFICATION (6 labels)
+================================================================================
+
+============================================================
+Running model (Multiclass): logreg
+[logreg] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.3165
+ > fold 2/5 val_f1=0.2983
+ > fold 3/5 val_f1=0.3245
+ > fold 4/5 val_f1=0.3193
+ > fold 5/5 val_f1=0.3046
+[logreg] Training final model on full TRAIN and evaluating on TEST...
+[logreg] Done. test f1_macro=0.3135 | acc=0.30670339761248855
+
+============================================================
+Running model (Multiclass): linear_svc
+[linear_svc] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.3144
+ > fold 2/5 val_f1=0.3174
+ > fold 3/5 val_f1=0.3286
+ > fold 4/5 val_f1=0.3405
+ > fold 5/5 val_f1=0.3062
+[linear_svc] Training final model on full TRAIN and evaluating on TEST...
+[linear_svc] Done. test f1_macro=0.3169 | acc=0.3122130394857668
+
+============================================================
+Running model (Multiclass): sgd_hinge
+[sgd_hinge] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.2025
+ > fold 2/5 val_f1=0.2107
+ > fold 3/5 val_f1=0.1803
+ > fold 4/5 val_f1=0.3091
+ > fold 5/5 val_f1=0.1958
+[sgd_hinge] Training final model on full TRAIN and evaluating on TEST...
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+[sgd_hinge] Done. test f1_macro=0.2069 | acc=0.2695133149678604
+
+============================================================
+Running model (Multiclass): multinb
+[multinb] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.0667
+ > fold 2/5 val_f1=0.0622
+ > fold 3/5 val_f1=0.0685
+ > fold 4/5 val_f1=0.0654
+ > fold 5/5 val_f1=0.0634
+[multinb] Training final model on full TRAIN and evaluating on TEST...
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+C:\Users\vrajp\AppData\Roaming\Python\Python312\site-packages\sklearn\metrics\_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+[multinb] Done. test f1_macro=0.0644 | acc=0.22451790633608815
+
+============================================================
+Running model (Multiclass): random_forest
+[random_forest] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.3400
+ > fold 2/5 val_f1=0.3469
+ > fold 3/5 val_f1=0.3519
+ > fold 4/5 val_f1=0.3332
+ > fold 5/5 val_f1=0.3248
+[random_forest] Training final model on full TRAIN and evaluating on TEST...
+[random_forest] Done. test f1_macro=0.3425 | acc=0.3402203856749311
+
+============================================================
+Running model (Multiclass): extra_trees
+[extra_trees] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.3351
+ > fold 2/5 val_f1=0.3332
+ > fold 3/5 val_f1=0.3528
+ > fold 4/5 val_f1=0.3397
+ > fold 5/5 val_f1=0.3085
+[extra_trees] Training final model on full TRAIN and evaluating on TEST...
+[extra_trees] Done. test f1_macro=0.3297 | acc=0.32644628099173556
+
+================================================================================
+RUNNING BINARY CLASSIFICATION (2 labels)
+================================================================================
+
+============================================================
+Running model (Binary): logreg
+[logreg] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.6710
+ > fold 2/5 val_f1=0.6700
+ > fold 3/5 val_f1=0.6516
+ > fold 4/5 val_f1=0.6777
+ > fold 5/5 val_f1=0.6615
+[logreg] Training final model on full TRAIN and evaluating on TEST...
+[logreg] Done. test f1_macro=0.6634 | acc=0.6648301193755739
+
+============================================================
+Running model (Binary): linear_svc
+[linear_svc] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.6798
+ > fold 2/5 val_f1=0.6788
+ > fold 3/5 val_f1=0.6622
+ > fold 4/5 val_f1=0.6774
+ > fold 5/5 val_f1=0.6696
+[linear_svc] Training final model on full TRAIN and evaluating on TEST...
+[linear_svc] Done. test f1_macro=0.6628 | acc=0.6652892561983471
+
+============================================================
+Running model (Binary): sgd_hinge
+[sgd_hinge] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.6671
+ > fold 2/5 val_f1=0.6781
+ > fold 3/5 val_f1=0.6560
+ > fold 4/5 val_f1=0.6849
+ > fold 5/5 val_f1=0.6720
+[sgd_hinge] Training final model on full TRAIN and evaluating on TEST...
+[sgd_hinge] Done. test f1_macro=0.6592 | acc=0.6616161616161617
+
+============================================================
+Running model (Binary): multinb
+[multinb] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.4223
+ > fold 2/5 val_f1=0.4221
+ > fold 3/5 val_f1=0.4230
+ > fold 4/5 val_f1=0.4301
+ > fold 5/5 val_f1=0.4254
+[multinb] Training final model on full TRAIN and evaluating on TEST...
+[multinb] Done. test f1_macro=0.4816 | acc=0.5872359963269054
+
+============================================================
+Running model (Binary): random_forest
+[random_forest] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.6893
+ > fold 2/5 val_f1=0.6764
+ > fold 3/5 val_f1=0.6798
+ > fold 4/5 val_f1=0.6932
+ > fold 5/5 val_f1=0.6927
+[random_forest] Training final model on full TRAIN and evaluating on TEST...
+[random_forest] Done. test f1_macro=0.6769 | acc=0.6818181818181818
+
+============================================================
+Running model (Binary): extra_trees
+[extra_trees] Running 5-fold CV (feature_type=emb_tfidf)...
+ > fold 1/5 val_f1=0.6815
+ > fold 2/5 val_f1=0.6763
+ > fold 3/5 val_f1=0.6765
+ > fold 4/5 val_f1=0.6925
+ > fold 5/5 val_f1=0.7006
+[extra_trees] Training final model on full TRAIN and evaluating on TEST...
+[extra_trees] Done. test f1_macro=0.6683 | acc=0.6744719926538109
+
+All models finished. Results saved to: ./results_emb_tfidf/
+Elapsed time: 1924.7s
